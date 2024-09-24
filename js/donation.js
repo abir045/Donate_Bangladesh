@@ -73,7 +73,8 @@ document
 
 document
   .getElementById("donate-1st-card")
-  .addEventListener("click", function () {
+  .addEventListener("click", function (event) {
+    event.preventDefault();
     const donationAmount = getInputFieldValue("1st-card-input");
     const cardBalance = getTextBalance("1st-card-balance");
 
@@ -90,6 +91,20 @@ document
       return;
     }
 
+    const foundation = document.getElementById("noakhali").innerText;
+
+    const div = document.createElement("div");
+
+    const today = new Date();
+
+    div.innerHTML = `
+      <div class="border border-gray-200 p-8 rounded-2xl mb-6">
+      <h3 class="text-xl font-bold mb-4">${donationAmount} Taka is Donated for ${foundation} </h3>
+      <p class="font-light text-[#111111] opacity-70 text-base">Date: ${today}</p>
+      </div>
+    
+    `;
+
     const newAccountBalance = SetNewAccountBalance(donationAmount);
 
     const newCardBalance = cardBalance + donationAmount;
@@ -98,6 +113,8 @@ document
 
     document.getElementById("account-balance").innerText = newAccountBalance;
 
+    document.getElementById("history").appendChild(div);
+
     modal.showModal();
   });
 
@@ -105,7 +122,8 @@ document
 
 document
   .getElementById("donate-2nd-card")
-  .addEventListener("click", function () {
+  .addEventListener("click", function (event) {
+    event.preventDefault();
     const donationAmount = getInputFieldValue("2nd-card-input");
     const cardBalance = getTextBalance("2nd-card-balance");
 
@@ -122,6 +140,20 @@ document
       return;
     }
 
+    const foundation = document.getElementById("feni").innerText;
+
+    const div = document.createElement("div");
+
+    const today = new Date();
+
+    div.innerHTML = `
+      <div class="border border-gray-200 p-8 rounded-2xl mb-6">
+      <h3 class="text-xl font-bold mb-4">${donationAmount} Taka is Donated for ${foundation} </h3>
+      <p class="font-light text-[#111111] opacity-70 text-base">Date: ${today}</p>
+      </div>
+    
+    `;
+
     const newCardBalance = cardBalance + donationAmount;
 
     const newAccountBalance = SetNewAccountBalance(donationAmount);
@@ -130,6 +162,8 @@ document
 
     document.getElementById("account-balance").innerText = newAccountBalance;
 
+    document.getElementById("history").appendChild(div);
+
     modal.showModal();
   });
 
@@ -137,7 +171,8 @@ document
 
 document
   .getElementById("donate-3rd-card")
-  .addEventListener("click", function () {
+  .addEventListener("click", function (event) {
+    event.preventDefault();
     const donationAmount = getInputFieldValue("3rd-card-input");
     const cardBalance = getTextBalance("3rd-card-balance");
 
@@ -154,6 +189,20 @@ document
       return;
     }
 
+    const foundation = document.getElementById("quota-movement").innerText;
+
+    const div = document.createElement("div");
+
+    const today = new Date();
+
+    div.innerHTML = `
+      <div class="border border-gray-200 p-8 rounded-2xl mb-6">
+      <h3 class="text-xl font-bold mb-4">${donationAmount} Taka is Donated for ${foundation} </h3>
+      <p class="font-light text-[#111111] opacity-70 text-base">Date: ${today}</p>
+      </div>
+    
+    `;
+
     const newCardBalance = cardBalance + donationAmount;
 
     const newAccountBalance = SetNewAccountBalance(donationAmount);
@@ -161,6 +210,8 @@ document
     document.getElementById("3rd-card-balance").innerText = newCardBalance;
 
     document.getElementById("account-balance").innerText = newAccountBalance;
+
+    document.getElementById("history").appendChild(div);
 
     modal.showModal();
   });
