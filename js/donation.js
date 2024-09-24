@@ -45,11 +45,16 @@ function changeColor(id) {
     .getElementById("show-donation-data")
     .classList.remove("bg-[#B4F461]");
 
+  document.getElementById("show-donation-data").classList.add("btn-outline");
+
   document
     .getElementById("show-donation-history")
     .classList.remove("bg-[#B4F461]");
 
+  document.getElementById("show-donation-history").classList.add("btn-outline");
+
   document.getElementById(id).classList.add("bg-[#B4F461]");
+  document.getElementById(id).classList.remove("btn-outline");
 }
 
 // showing donation data
