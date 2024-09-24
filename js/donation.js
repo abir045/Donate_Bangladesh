@@ -79,6 +79,8 @@ document
 
     const accountBalance = getTextBalance("account-balance");
 
+    const modal = document.getElementById("my_modal_1");
+
     if (
       donationAmount > accountBalance ||
       donationAmount <= 0 ||
@@ -95,6 +97,8 @@ document
     document.getElementById("1st-card-balance").innerText = newCardBalance;
 
     document.getElementById("account-balance").innerText = newAccountBalance;
+
+    modal.showModal();
   });
 
 // handling donation in the second card
@@ -106,6 +110,8 @@ document
     const cardBalance = getTextBalance("2nd-card-balance");
 
     const accountBalance = getTextBalance("account-balance");
+
+    const modal = document.getElementById("my_modal_2");
 
     if (
       donationAmount > accountBalance ||
@@ -123,6 +129,8 @@ document
     document.getElementById("2nd-card-balance").innerText = newCardBalance;
 
     document.getElementById("account-balance").innerText = newAccountBalance;
+
+    modal.showModal();
   });
 
 //handling donation in the 3rd card
@@ -134,6 +142,8 @@ document
     const cardBalance = getTextBalance("3rd-card-balance");
 
     const accountBalance = getTextBalance("account-balance");
+
+    const modal = document.getElementById("my_modal_3");
 
     if (
       donationAmount > accountBalance ||
@@ -151,4 +161,6 @@ document
     document.getElementById("3rd-card-balance").innerText = newCardBalance;
 
     document.getElementById("account-balance").innerText = newAccountBalance;
+
+    modal.showModal();
   });
