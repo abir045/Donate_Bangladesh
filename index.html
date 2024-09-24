@@ -44,14 +44,21 @@
 
       <div class="relative">
         <div class="flex items-center justify-center space-x-2 mt-20 mb-8">
-          <button class="btn btn-lg bg-[#B4F461]">Donation</button>
-          <button class="btn btn-lg bg-white btn-outline">History</button>
+          <button
+            class="btn btn-lg btn-outline bg-[#B4F461]"
+            id="show-donation-data"
+          >
+            Donation
+          </button>
+          <button class="btn btn-lg btn-outline" id="show-donation-history">
+            History
+          </button>
         </div>
       </div>
     </div>
 
     <!-- card section -->
-    <div class="container mx-auto mt-8 space-y-8 pb-20">
+    <div class="container mx-auto mt-8 space-y-8 pb-20" id="donation-data">
       <!-- 1st card -->
       <div
         class="card lg:card-side bg-base-100 shadow-xl border border-gray-200"
@@ -186,6 +193,10 @@
           </button>
         </div>
       </div>
+    </div>
+
+    <div class="container mx-auto mb-96 hidden" id="history">
+      <h1>Transaction history</h1>
     </div>
 
     <footer class="bg-[#F9F7F3] py-16"></footer>

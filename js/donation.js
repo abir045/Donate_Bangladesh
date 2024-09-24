@@ -28,7 +28,48 @@ function SetNewAccountBalance(amount) {
   return newBalance;
 }
 
-function newCardBalance() {}
+function showSectionById(id) {
+  // hide all the sections
+  document.getElementById("donation-data").classList.add("hidden");
+  document.getElementById("history").classList.add("hidden");
+
+  //show the section with the provided id as parameter
+
+  document.getElementById(id).classList.remove("hidden");
+}
+
+// active button change color
+
+function changeColor(id) {
+  document
+    .getElementById("show-donation-data")
+    .classList.remove("bg-[#B4F461]");
+
+  document
+    .getElementById("show-donation-history")
+    .classList.remove("bg-[#B4F461]");
+
+  document.getElementById(id).classList.add("bg-[#B4F461]");
+}
+
+// showing donation data
+document
+  .getElementById("show-donation-data")
+  .addEventListener("click", function () {
+    showSectionById("donation-data");
+    changeColor("show-donation-data");
+  });
+
+// showing history data
+
+document
+  .getElementById("show-donation-history")
+  .addEventListener("click", function () {
+    showSectionById("history");
+    changeColor("show-donation-history");
+  });
+
+//  Handling donation in the first card
 
 document
   .getElementById("donate-1st-card")
@@ -56,6 +97,8 @@ document
     document.getElementById("account-balance").innerText = newAccountBalance;
   });
 
+// handling donation in the second card
+
 document
   .getElementById("donate-2nd-card")
   .addEventListener("click", function () {
@@ -81,6 +124,8 @@ document
 
     document.getElementById("account-balance").innerText = newAccountBalance;
   });
+
+//handling donation in the 3rd card
 
 document
   .getElementById("donate-3rd-card")
