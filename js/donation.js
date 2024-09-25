@@ -120,6 +120,8 @@ document
 
     document.getElementById("history").appendChild(div);
 
+    document.getElementById("1st-card-input").value = "";
+
     modal.showModal();
   });
 
@@ -169,6 +171,8 @@ document
 
     document.getElementById("history").appendChild(div);
 
+    document.getElementById("2nd-card-input").value = "";
+
     modal.showModal();
   });
 
@@ -217,6 +221,8 @@ document
     document.getElementById("account-balance").innerText = newAccountBalance;
 
     document.getElementById("history").appendChild(div);
+
+    document.getElementById("3rd-card-input").value = "";
 
     modal.showModal();
   });
